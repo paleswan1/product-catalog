@@ -198,13 +198,12 @@ export default function Products() {
       ) : (
         <>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-  {products.map((p: any) => (
-    <Link key={p.id} to={`/products/${p.id}`}>
-      <ProductCard product={p} />
-    </Link>
-  ))}
-</div>
-
+            {products.map((p: any) => (
+              <Link key={p.id} to={`/products/${p.id}`}>
+                <ProductCard product={p} />
+              </Link>
+            ))}
+          </div>
 
           <div ref={loaderRef} className="text-center py-6">
             {isFetching && (

@@ -1,10 +1,12 @@
-import { ArrowLeft, Ban } from "lucide-react";
-import { Link } from "react-router-dom";    
+import { ArrowLeft, Ban } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function UnAvailable() {
   return (
-    <div className="w-full min-h-screen bg-white">   {/* FULL PAGE WHITE BG */}
-        <div className="max-w-md mx-auto px-4 py-16 text-center">
+    <div className="w-full min-h-screen bg-white">
+      {' '}
+      {/* FULL PAGE WHITE BG */}
+      <div className="max-w-md mx-auto px-4 py-16 text-center">
         <Ban size={64} className="mx-auto text-gray-400 mb-6" />
 
         <h1 className="text-2xl font-semibold text-gray-800 mb-4">

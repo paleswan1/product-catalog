@@ -10,7 +10,9 @@ export default function Cart() {
   );
 
   return (
-    <div className="w-full min-h-screen bg-white">   {/* FULL PAGE WHITE BG */}
+    <div className="w-full min-h-screen bg-white">
+      {' '}
+      {/* FULL PAGE WHITE BG */}
       {items.length === 0 ? (
         <div className="max-w-md mx-auto px-4 py-16 text-center">
           <ShoppingBag size={64} className="mx-auto text-gray-400 mb-6" />
@@ -30,7 +32,9 @@ export default function Cart() {
         </div>
       ) : (
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl font-bold text-gray-800 mb-8">Shopping Cart</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-8">
+            Shopping Cart
+          </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-4">

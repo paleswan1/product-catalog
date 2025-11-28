@@ -32,7 +32,7 @@ export const useGetProductById = (id: string) =>
     queryKey: [QUERY_PRODUCTS_KEY, id],
     queryFn: async () => {
       const response = await productService.getById(id);
-      return response.data; 
+      return response.data;
     },
     enabled: !!id,
     staleTime: 30 * 60 * 1000,

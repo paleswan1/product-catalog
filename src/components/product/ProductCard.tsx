@@ -1,45 +1,43 @@
-'use client'
+'use client';
 
-import { addToCart } from '@/lib/slices/cartSlice'
-import type { RootState } from '@/lib/store/store'
-import { useDispatch, useSelector } from 'react-redux'
-import { toast } from 'sonner'
-import { ShoppingCart, Check, Star, Eye } from 'lucide-react'
+import { addToCart } from '@/lib/slices/cartSlice';
+import type { RootState } from '@/lib/store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'sonner';
+import { ShoppingCart, Check, Star, Eye } from 'lucide-react';
 
 interface ProductCardProps {
-  product: any
+  product: any;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const dispatch = useDispatch()
-  const cartItems = useSelector((state: RootState) => state.cart.items)
-  const isInCart = cartItems.some((item) => item.id === product.id)
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state: RootState) => state.cart.items);
+  const isInCart = cartItems.some((item) => item.id === product.id);
 
   const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
+    e.preventDefault();
+    e.stopPropagation();
 
     if (!isInCart) {
-      dispatch(addToCart(product))
-      toast.success(`${product.title} added to cart!`)
+      dispatch(addToCart(product));
+      toast.success(`${product.title} added to cart!`);
     }
-  }
+  };
 
   return (
     <div className="group h-full">
       <div className="relative h-full bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-gray-200/40 transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
-
         {/* Image Container */}
         <div className="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center">
           <img
-            src={product.thumbnail || "/placeholder.svg"}
+            src={product.thumbnail || '/placeholder.svg'}
             alt={product.title}
             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 p-3"
           />
 
           {/* Dark Overlay + Add Button on Hover */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
-
             {/* Add to Cart button */}
             <button
               onClick={handleAddToCart}
@@ -71,7 +69,6 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Content */}
         <div className="flex-1 p-4 flex flex-col gap-3">
-
           {/* Title */}
           <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 group-hover:text-gray-700">
             {product.title}
@@ -89,7 +86,6 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Price + Rating */}
           <div className="mt-auto pt-3 border-t border-gray-100">
             <div className="flex items-center justify-between gap-2">
-
               <span className="text-lg font-bold text-gray-900">
                 ${product.price}
               </span>
@@ -112,11 +108,10 @@ export function ProductCard({ product }: ProductCardProps) {
                   {product.rating}
                 </span>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -28,9 +28,9 @@ const Routing = () => {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path = "/unAvailable" element={<UnAvailable />} />
+          <Route path="/unAvailable" element={<UnAvailable />} />
           <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
