@@ -1,37 +1,34 @@
+## 🛒 Product Catalog - React
+- A clean and responsive Product Catalog built with React, designed to provide a smooth shopping experience.
+- This app allows users to browse products fetched from a public API, search by name, filter by category, and enjoy infinite scrolling. The UI is fully mobile-friendly and responsive.
+- Optional enhancements include dark/light theme toggle, sorting, add-to-cart functionality, and enhanced loading animations.
+
+## 📦 Features
+- Product Fetching: Load products dynamically from a public API
+- Search: Search products by name
+- Category Filtering: Filter products by category
+- Infinite Scrolling: Load more products as users scroll
+- Responsive Design: Mobile-first, works seamlessly on all devices
+
+## Optional Enhancements:
+- Product sorting (price, popularity, etc.)
+
+Add-to-cart functionality
 # 🚀 React + TypeScript Starter Template
 
 A modern, production-ready **React + TypeScript** starter template pre-configured with:
 
-- **Vite** for fast development
-- **TailwindCSS** for styling
-- **shadcn/ui** for components
-- **React Query** for server state
-- **Redux Toolkit** for client state
-- **React Hook Form + Zod** for forms & validation
-- **Axios** for API calls
-- **Lucide React** for icons
-- **JS Cookie** for cookie handling
-- **React Auth Kit** for authentication
-- **ESLint + Prettier + Husky** for linting, formatting, and pre-commit hooks
-
----
-
-## 📦 Tech Stack
-
-| Category       | Library                      |
-| -------------- | ---------------------------- |
-| Framework      | React + TypeScript           |
-| Dev Server     | Vite                         |
-| Styling        | TailwindCSS, shadcn/ui       |
-| Server State   | React Query                  |
-| Client State   | Redux Toolkit                |
-| Forms          | React Hook Form + Zod        |
-| HTTP           | Axios                        |
-| Icons          | Lucide React                 |
-| Authentication | React Auth Kit               |
-| Utilities      | html-react-parser, js-cookie |
-| Formatting     | ESLint, Prettier             |
-| Git Hooks      | Husky, lint-staged           |
+- **Vite** for fast development  
+- **TailwindCSS** for styling  
+- **shadcn/ui** for components  
+- **React Query** for server state  
+- **Redux Toolkit** for client state  
+- **React Hook Form + Zod** for forms & validation  
+- **Axios** for API calls  
+- **Lucide React** for icons  
+- **JS Cookie** for cookie handling  
+- **React Auth Kit** for authentication  
+- **ESLint + Prettier + Husky** for linting, formatting, and pre-commit hooks  
 
 ---
 
